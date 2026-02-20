@@ -14,20 +14,44 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
-    
     <style>
-        /* ── Animations scroll ── */
-        .anim { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
-        .anim.from-left  { transform: translateX(-32px); }
-        .anim.from-right { transform: translateX(32px); }
-        .anim.zoom-in    { transform: scale(.93); }
-        .anim.visible    { opacity: 1 !important; transform: none !important; }
-        .anim.d1 { transition-delay: .08s; }
-        .anim.d2 { transition-delay: .16s; }
-        .anim.d3 { transition-delay: .24s; }
-        .anim.d4 { transition-delay: .32s; }
-        .anim.d5 { transition-delay: .40s; }
-        .anim.d6 { transition-delay: .48s; }
+        /* EPV ANIMATIONS */
+        @keyframes epvDown {0%{opacity:0;transform:translateY(-24px)}100%{opacity:1;transform:none}}
+        @keyframes epvUp   {0%{opacity:0;transform:translateY(24px)} 100%{opacity:1;transform:none}}
+        .pg-title{animation:epvDown .8s ease both}
+        .pg-sub  {animation:epvUp   .8s .25s ease both}
+        /* Scroll-triggered */
+        .a{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+        .a.al{transform:translateX(-28px)}.a.ar{transform:translateX(28px)}.a.az{transform:scale(.93)}
+        .a.on{opacity:1!important;transform:none!important}
+        .a.t1{transition-delay:.07s}.a.t2{transition-delay:.14s}.a.t3{transition-delay:.21s}
+        .a.t4{transition-delay:.28s}.a.t5{transition-delay:.35s}.a.t6{transition-delay:.42s}
+        .a.t7{transition-delay:.49s}.a.t8{transition-delay:.56s}
+        /* Mobile: hero banner sous la navbar */
+        @media(max-width:991px){
+            .mobile-hero{display:flex!important}
+            .navbar-brand.d-lg-none{display:none!important}
+        }
+        @media(min-width:992px){
+            .mobile-hero{display:none!important}
+        }
+    </style>
+    <style>
+        /* Animations scroll */
+        body.js-ready .anim { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+        body.js-ready .anim.zoom-in { transform: scale(.95); }
+        body.js-ready .anim.visible { opacity: 1 !important; transform: none !important; }
+        body.js-ready .anim.d1 { transition-delay: .1s; }
+        body.js-ready .anim.d2 { transition-delay: .2s; }
+        body.js-ready .anim.d3 { transition-delay: .3s; }
+    </style>
+    <style>
+        body.js-ready .anim { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+        body.js-ready .anim.zoom-in { transform: scale(.95); }
+        body.js-ready .anim.visible { opacity: 1 !important; transform: none !important; }
+        body.js-ready .anim.d1 { transition-delay: .1s; }
+        body.js-ready .anim.d2 { transition-delay: .2s; }
+        body.js-ready .anim.d3 { transition-delay: .3s; }
     </style>
 </head>
 <body>
@@ -80,7 +104,7 @@
                 <div class="d-none d-md-block" style="background:linear-gradient(180deg,#2C3E50 0%,#1B3A52 100%);padding:1rem 0;border-bottom:3px solid #D4B896">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6"><p class="anim mb-0" style="color:#FFF;font-size:.95rem"><i class="bi bi-geo-alt-fill me-2" style="color:#D4B896"></i>410 clos de la courtine, 93160 Noisy-Le-Grand</p></div>
+                <div class="col-md-6"><p class="mb-0" style="color:#FFF;font-size:.95rem"><i class="bi bi-geo-alt-fill me-2" style="color:#D4B896"></i>410 clos de la courtine, 93160 Noisy-Le-Grand</p></div>
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex justify-content-md-end align-items-center gap-3 flex-wrap">
                         <span style="color:#FFF;font-size:.95rem" ><i class="bi bi-envelope-fill me-2" style="color:#D4B896"></i>contact@epvphiladelphie.fr</span>
@@ -101,7 +125,7 @@
     <section class="py-5" style="background-color: #E8D5C4;">
         <div class="container text-center">
             <h1 class="anim epv-pg-title display-6 fw-bold" style="color: #1A1A1A;">Médiathèque</h1>
-            <p class="anim lead 2" style="color: #4A4A4A;">Podcasts, enseignements</p>
+            <p class="lead 2" style="color: #4A4A4A;">Podcasts, enseignements</p>
         </div>
     </section>
 
@@ -122,10 +146,10 @@
     <section class="py-5">
         <div class="container">
             <div class="row align-items-center bg-primary text-white rounded p-5 mb-5">
-                <div class="col-lg-6 sl">
+                <div class="col-lg-6">
                     <h2 class="anim d1 display-5 mb-3" style="color: #1A1A1A;" >Notre podcast</h2>
-                    <p class="anim lead mb-4" style="color: #4A4A4A;">Découvrez nos enseignements, méditations et réflexions spirituelles. Un nouveau contenu chaque semaine pour nourrir votre foi et accompagner votre cheminement.</p>
-                    <a href="#podcasts" class="anim d2 btn btn-light btn-lg">Écouter maintenant</a>
+                    <p class="lead mb-4" style="color: #4A4A4A;">Découvrez nos enseignements, méditations et réflexions spirituelles. Un nouveau contenu chaque semaine pour nourrir votre foi et accompagner votre cheminement.</p>
+                    <a href="#podcasts" class="btn btn-light btn-lg">Écouter maintenant</a>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="bi bi-broadcast display-1"></i>
@@ -138,7 +162,7 @@
     <section class="py-5" id="podcasts">
         <div class="container">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
-                <h2  class="anim d1">Derniers épisodes</h2>
+                <h2 class="anim d1">Derniers épisodes</h2>
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-primary active" data-filter="all">Tous</button>
                     <button type="button" class="btn btn-outline-primary" data-filter="enseignement">Enseignements</button>
@@ -161,7 +185,7 @@
                                         <small class="text-muted">45 min</small>
                                     </div>
                                     <h5 class="anim d3 card-title" style="color: #1A1A1A;">La foi au quotidien</h5>
-                                    <p class="anim card-text text-muted mb-3" style="color: #4A4A4A;">Comment vivre sa foi dans les défis du quotidien ? Réflexions et conseils pratiques pour intégrer la spiritualité dans votre vie de tous les jours.</p>
+                                    <p class="card-text text-muted mb-3" style="color: #4A4A4A;">Comment vivre sa foi dans les défis du quotidien ? Réflexions et conseils pratiques pour intégrer la spiritualité dans votre vie de tous les jours.</p>
                                     <div class="mb-3">
                                         <small class="text-muted">
                                             <i class="bi bi-calendar3 me-1"></i> 15 janvier 2024
@@ -188,7 +212,7 @@
 
                 <!-- Episode 2 -->
                 <div class="col-lg-6 podcast-item" data-category="meditation">
-                    <div class="anim d1 card h-100 shadow-sm"> <div class="row g-0">
+                    <div class="card h-100 shadow-sm"> <div class="row g-0">
                             <div class="col-md-4 bg-success d-flex align-items-center justify-content-center p-4">
                                 <i class="bi bi-sun text-white display-1"></i>
                             </div>
@@ -199,7 +223,7 @@
                                         <small class="text-muted">20 min</small>
                                     </div>
                                     <h5 class="anim d3 card-title" style="color: #1A1A1A;">Trouver la paix intérieure</h5>
-                                    <p class="anim card-text text-muted mb-3" style="color: #4A4A4A;">Méditation guidée pour cultiver la sérénité et l'apaisement dans les moments de turbulence. Accompagnement musical doux.</p>
+                                    <p class="card-text text-muted mb-3" style="color: #4A4A4A;">Méditation guidée pour cultiver la sérénité et l'apaisement dans les moments de turbulence. Accompagnement musical doux.</p>
                                     <div class="mb-3">
                                         <small class="text-muted">
                                             <i class="bi bi-calendar3 me-1"></i> 12 janvier 2024
@@ -237,7 +261,7 @@
                                         <small class="text-muted">30 min</small>
                                     </div>
                                     <h5 class="anim d3 card-title" style="color: #1A1A1A;">Parcours de foi - Marie</h5>
-                                    <p class="anim card-text text-muted mb-3" style="color: #4A4A4A;">Marie partage son parcours de foi, ses doutes, ses découvertes et comment la spiritualité a transformé sa vie.</p>
+                                    <p class="card-text text-muted mb-3" style="color: #4A4A4A;">Marie partage son parcours de foi, ses doutes, ses découvertes et comment la spiritualité a transformé sa vie.</p>
                                     <div class="mb-3">
                                         <small class="text-muted">
                                             <i class="bi bi-calendar3 me-1"></i> 8 janvier 2024
@@ -275,7 +299,7 @@
                                         <small class="text-muted">50 min</small>
                                     </div>
                                     <h5 class="anim d3 card-title" style="color: #1A1A1A;">Comprendre les textes sacrés</h5>
-                                    <p class="anim card-text text-muted mb-3" style="color: #4A4A4A;">Une approche accessible pour découvrir et comprendre les grands textes spirituels. Épisode 1 : Les paraboles.</p>
+                                    <p class="card-text text-muted mb-3" style="color: #4A4A4A;">Une approche accessible pour découvrir et comprendre les grands textes spirituels. Épisode 1 : Les paraboles.</p>
                                     <div class="mb-3">
                                         <small class="text-muted">
                                             <i class="bi bi-calendar3 me-1"></i> 5 janvier 2024
@@ -316,18 +340,18 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center" > <i class="bi bi-instagram display-3 mb-4" style="color: #E4405F;"></i>
                     <h2 class="anim d1 mb-4" style="color: white;">Suivez nos lives Instagram</h2>
-                    <p style="color: white;" class="anim lead mb-4" style="color: #2C3E50;">Rejoignez-nous en direct pour nos enseignements, prières et moments de partage</p>
+                    <p style="color: white;" class="lead mb-4" style="color: #2C3E50;">Rejoignez-nous en direct pour nos enseignements, prières et moments de partage</p>
                     
-                    <div class="anim d1 card border-0 shadow-sm mb-4">
+                    <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body p-4">
                             <h5 class="anim d3 mb-3" style="color: #1A1A1A;">Connectez-vous sur Instagram</h5>
-                            <p  class="anim text-muted mb-4" style="color: #D4B896;">Pour ne manquer aucun de nos lives, suivez notre compte Instagram et activez les notifications</p>
+                            <p  class="text-muted mb-4" style="color: #D4B896;">Pour ne manquer aucun de nos lives, suivez notre compte Instagram et activez les notifications</p>
                             
-                            <a href="https://www.instagram.com/epv_philadelphie_paris_france?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="anim d2 btn btn-lg w-100 text-white mb-3" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
+                            <a href="https://www.instagram.com/epv_philadelphie_paris_france?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-lg w-100 text-white mb-3" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
                                 <i class="bi bi-instagram me-2"></i>Suivre sur Instagram
                             </a>
                      
-                            <p  class="anim small text-muted mb-0" style="color: #D4B896;">
+                            <p  class="small text-muted mb-0" style="color: #D4B896;">
                                 <i class="bi bi-bell me-1"></i>
                                 N'oubliez pas d'activer les notifications pour être alerté lors de nos prochains lives
                             </p>
@@ -351,7 +375,7 @@
                     <div class="card border-0 shadow-sm" > <div class="card-body p-5 text-center">
                             <i class="bi bi-envelope-heart display-4 mb-3" style="color: #C4A574;"></i>
                             <h3 class="anim d2 mb-3" style="color: #1A1A1A;">Restez connecté</h3>
-                            <p class="anim mb-4">Recevez une notification par email à chaque nouveau contenu</p>
+                            <p class="mb-4">Recevez une notification par email à chaque nouveau contenu</p>
                             
                             <form action="https://formsubmit.co/dorcasmordiva@gmail.com" method="POST">
                                 <input type="hidden" name="_subject" value="Nouvelle inscription Newsletter">
@@ -363,11 +387,11 @@
                                         <input type="email" name="email" class="form-control form-control-lg" placeholder="Votre email" required>
                                     </div>
                                     <div class="col-md-4">
-                                        <button type="submit" class="anim d2 btn btn-primary btn-lg w-100">S'inscrire</button>
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">S'inscrire</button>
                                     </div>
                                 </div>
                                 
-                                <p class="anim small text-muted mt-3 mb-0" style="color: #4A4A4A;">
+                                <p class="small text-muted mt-3 mb-0" style="color: #4A4A4A;">
                                     <i class="bi bi-shield-check me-1"></i>
                                     Vos données sont protégées. Désinscription possible à tout moment.
                                 </p>
@@ -387,8 +411,8 @@
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm" > <div class="card-body text-center">
                             <i class="bi bi-camera-video display-3 text-muted mb-3"></i>
-                            <h5  style="color: black;"  class="anim d3">Vidéos de sermons</h5>
-                            <p class="anim text-black" style="color: black;" >Bientôt disponible : retrouvez nos enseignements en vidéo</p>
+                            <h5  style="color: black;" class="anim d3">Vidéos de sermons</h5>
+                            <p class="text-black" style="color: black;" >Bientôt disponible : retrouvez nos enseignements en vidéo</p>
                         </div>
                     </div>
                 </div>
@@ -396,7 +420,7 @@
                     <div class="card h-100 border-0 shadow-sm" > <div class="card-body">
                             <div class="text-center mb-3">
                                 <i class="bi bi-file-earmark-text display-3 text-muted mb-2"></i>
-                                <h5 style="color: #2C3E50;"  class="anim d3">Articles &amp; Ressources</h5>
+                                <h5 style="color: #2C3E50;" class="anim d3">Articles &amp; Ressources</h5>
                             </div>
                             <ul class="list-unstyled mb-2">
                                 <li class="mb-2">
@@ -417,16 +441,16 @@
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm" > <div class="card-body text-center">
                             <i class="bi bi-calendar-event display-3 text-muted mb-3"></i>
-                            <h5 style="color: #2C3E50;"  class="anim d3">Événements en direct</h5>
-                            <p class="anim text-muted">Participez à nos événements en ligne en direct</p>
+                            <h5 style="color: #2C3E50;" class="anim d3">Événements en direct</h5>
+                            <p class="text-muted">Participez à nos événements en ligne en direct</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 border-0 shadow-sm" > <div class="card-body text-center">
                             <i class="bi bi-people-fill display-3 mb-3" style="color:#D4B896;"></i>
-                            <h5 style="color: #2C3E50;"  class="anim d3">Conférence des mamans</h5>
-                            <p class="anim text-muted">Un événement spécial dédié aux mères de notre communauté — date à venir</p>
+                            <h5 style="color: #2C3E50;" class="anim d3">Conférence des mamans</h5>
+                            <p class="text-muted">Un événement spécial dédié aux mères de notre communauté — date à venir</p>
                         </div>
                     </div>
                 </div>
@@ -463,18 +487,10 @@
                     <h6 class="text-white mb-2">Suivez-nous</h6>
                     <p class="text-white-50 mb-3" style="font-size:.85rem">Restez connectés et suivez nos actualités sur nos réseaux sociaux.</p>
                     <div class="d-flex gap-3">
-                        <a href="https://www.facebook.com/people/Epv-Philadelphie/100081168060680/#" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem">
-                            <i class="bi bi-facebook fs-4"></i><span>Facebook</span>
-                        </a>
-                        <a href="https://www.instagram.com/epv_philadelphie_paris_france" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem">
-                            <i class="bi bi-instagram fs-4"></i><span>Instagram</span>
-                        </a>
-                        <a href="https://www.youtube.com/@e.p.vphiladelphieparis9228" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem">
-                            <i class="bi bi-youtube fs-4"></i><span>YouTube</span>
-                        </a>
-                        <a href="https://www.tiktok.com/@epvphiladelphie?is_from_webapp=1&sender_device=pc" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem">
-                            <i class="bi bi-tiktok fs-4"></i><span>TikTok</span>
-                        </a>
+                        <a href="https://www.facebook.com/people/Epv-Philadelphie/100081168060680/#" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem"><i class="bi bi-facebook fs-4"></i><span>Facebook</span></a>
+                        <a href="https://www.instagram.com/epv_philadelphie_paris_france" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem"><i class="bi bi-instagram fs-4"></i><span>Instagram</span></a>
+                        <a href="https://www.youtube.com/@e.p.vphiladelphieparis9228" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem"><i class="bi bi-youtube fs-4"></i><span>YouTube</span></a>
+                        <a href="https://www.tiktok.com/@epvphiladelphie?is_from_webapp=1&sender_device=pc" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem"><i class="bi bi-tiktok fs-4"></i><span>TikTok</span></a>
                     </div>
                 </div>
             </div>
@@ -485,17 +501,17 @@
 
     <div class="modal fade" id="mentionsLegalesModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
         <div class="modal-header" style="background:#2C3E50"><h5 class="anim d3 modal-title" style="color:#D4B896">Mentions légales</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><h4 style="color:#1A1A1A" class="anim d2">Éditeur</h4><p style="color:#2C3E50" class="anim"><strong>EPV Philadelphie Paris</strong><br>410 clos de la courtine, 93160 Noisy-Le-Grand</p><hr><h4 style="color:#1A1A1A" class="anim d2">Contact</h4><p style="color:#2C3E50" class="anim"><a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a></p></div>
+        <div class="modal-body" style="background:#E8D5C4"><h4 style="color:#1A1A1A" class="anim d2">Éditeur</h4><p style="color:#2C3E50"><strong>EPV Philadelphie Paris</strong><br>410 clos de la courtine, 93160 Noisy-Le-Grand</p><hr><h4 style="color:#1A1A1A" class="anim d2">Contact</h4><p style="color:#2C3E50"><a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a></p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
     <div class="modal fade" id="cguModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
         <div class="modal-header" style="background:#2C3E50"><h5 class="anim d3 modal-title" style="color:#D4B896">CGU</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50" class="anim">Les présentes CGU régissent l'accès au site de l'Église EPV Philadelphie Paris.</p></div>
+        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Les présentes CGU régissent l'accès au site de l'Église EPV Philadelphie Paris.</p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
     <div class="modal fade" id="confidentialiteModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
         <div class="modal-header" style="background:#2C3E50"><h5 class="anim d3 modal-title" style="color:#D4B896">Politique de confidentialité</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50" class="anim">Données uniquement via vos formulaires. Droits RGPD : <a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a>. Cookies techniques uniquement.</p></div>
+        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Données uniquement via vos formulaires. Droits RGPD : <a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a>. Cookies techniques uniquement.</p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
 
@@ -504,27 +520,22 @@
         window.addEventListener('DOMContentLoaded', function() {
             var el = document.getElementById('heroCarousel');
             if (el) new bootstrap.Carousel(el, {interval: 3500, ride: 'carousel', pause: false, wrap: true});
-        });
-        
-        document.querySelectorAll('[data-filter]').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('[data-filter]').forEach(function(b) { b.classList.remove('active'); });
-                this.classList.add('active');
-                var f = this.getAttribute('data-filter');
-                document.querySelectorAll('.podcast-item').forEach(function(item) {
-                    item.style.display = (f === 'all' || item.getAttribute('data-category') === f) ? 'block' : 'none';
-                });
-            });
-        });
-        /* ── IntersectionObserver animations ── */
-        (function() {
+            document.body.classList.add('js-ready');
             var io = new IntersectionObserver(function(entries) {
                 entries.forEach(function(e) {
                     if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
                 });
-            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            }, { threshold: 0.05 });
             document.querySelectorAll('.anim').forEach(function(el) { io.observe(el); });
-        })();
+        });
+        document.querySelectorAll('[data-filter]').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('[data-filter]').forEach(function(b){b.classList.remove('active');});this.classList.add('active');var f=this.getAttribute('data-filter');document.querySelectorAll('.podcast-item').forEach(function(item){item.style.display=(f==='all'||item.getAttribute('data-category')===f)?'block':'none';});});});
+        document.body.classList.add('js-ready');
+        var io = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.anim').forEach(function(el) { io.observe(el); });
     </script>
 </body>
 </html>
