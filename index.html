@@ -20,6 +20,7 @@
         body {
             font-family: 'EB Garamond', 'Bookman Old Style', serif;
             color: #374151;
+            padding-top: 0;
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -48,30 +49,48 @@
 </head>
 <body>
         <!-- Navigation Style MFD -->
-            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2C3E50; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2C3E50; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <!-- Logo et titre pour mobile -->
+            <a class="navbar-brand d-lg-none mx-auto text-center" href="index.html" style="width: 100%;">
+                <img src="images/logo.png" alt="Logo" height="60" class="mb-2">
+                <div style="color: #D4B896; font-size: 0.85rem; font-style: italic;">Une église en mission pour le salut de la jeunesse et des nations</div>
+            </a>
+            
+            <!-- Logo et titre pour desktop -->
+            <a class="navbar-brand d-none d-lg-flex align-items-center" href="index.html">
                 <img src="images/logo.png" alt="Logo" height="70" class="me-3">
                 <div>
                     <div style="color: #FFFFFF; font-weight: 700; font-size: 1.4rem; letter-spacing: 2px;">EPV PHILADELPHIE PARIS</div>
-                    <div style="color: #D4B896; font-size: 0.9rem; font-style: italic; letter-spacing: 1px;">Une Église forte commence par des familles enracinées en Christ</div>
+                    <div style="color: #D4B896; font-size: 0.9rem; font-style: italic; letter-spacing: 1px;">Une église en mission pour le salut de la jeunesse et des nations</div>
                 </div>
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: #FFFFFF; font-weight: 500;">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="rendez-vous.html" style="color: #FFFFFF; font-weight: 500;">Rendez-vous pastoral</a></li>
-                    <li class="nav-item"><a class="nav-link" href="medias.html" style="color: #FFFFFF; font-weight: 500;">Médias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="boutique.html" style="color: #FFFFFF; font-weight: 500;">Boutique/Soutien</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" style="color: #FFFFFF; font-weight: 500;">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rendez-vous.html" style="color: #FFFFFF; font-weight: 500;">Rendez-vous pastoral</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="medias.html" style="color: #FFFFFF; font-weight: 500;">Médias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="boutique.html" style="color: #FFFFFF; font-weight: 500;">Boutique/Soutien</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #FFFFFF; font-weight: 500;">Plus</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #FFFFFF; font-weight: 500;">
+                            Plus
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="departements.html">Nos départements</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="inscription-ecodim.html">Inscription ECODIM</a></li>
+                            <li><a class="dropdown-item" href="inscription-ecodim.html">Inscription Ecodim</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -85,7 +104,7 @@
                 <div class="col-md-6"><p class="mb-0" style="color:#FFF;font-size:.95rem"><i class="bi bi-geo-alt-fill me-2" style="color:#D4B896"></i>410 clos de la courtine, 93160 Noisy-Le-Grand</p></div>
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex justify-content-md-end align-items-center gap-3 flex-wrap">
-                        <span style="color:#FFF;font-size:.95rem" class="a t3"><i class="bi bi-envelope-fill me-2" style="color:#D4B896"></i>contact@epvphiladelphie.fr</span>
+                        <span style="color:#FFF;font-size:.95rem" class="a t3"><i class="bi bi-envelope-fill me-2" style="color:#D4B896"></i><a href="mailto:contact@epvphiladelphie.fr" style="color:inherit">contact@epvphiladelphie.fr</a></span>
                         <span style="color:#FFF;font-size:.95rem" class="a t3"><i class="bi bi-telephone-fill me-2" style="color:#D4B896"></i>06 98 97 09 24</span>
                         <div class="d-flex gap-2">
                             <a href="https://www.facebook.com/people/Epv-Philadelphie/100081168060680/#" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-facebook"></i></a>
@@ -109,13 +128,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="C:/Dorcas/site Naomie/images/slide1.jpg" class="a az d-block w-100" alt="Slide 1" style="height: 400px; object-fit: contain; background:#111;">
+                <img src="Z:/Site Naomie/images/slide1.jpg" class="a az d-block w-100" alt="Slide 1" style="height: 400px; object-fit: contain; background:#111;">
             </div>
             <div class="carousel-item">
-                <img src="C:/Dorcas/site Naomie/images/slide2.jpg" class="a az d-block w-100" alt="Slide 2" style="height: 400px; object-fit: contain; background:#111;">
+                <img src="Z:/Site Naomie/images/slide2.jpg" class="a az d-block w-100" alt="Slide 2" style="height: 400px; object-fit: contain; background:#111;">
             </div>
             <div class="carousel-item">
-                <img src="C:/Dorcas/site Naomie/images/slide3.jpg" class="a az d-block w-100" alt="Slide 3" style="height: 400px; object-fit: contain; background:#111;">
+                <img src="Z:/Site Naomie/images/slide3.jpg" class="a az d-block w-100" alt="Slide 3" style="height: 400px; object-fit: contain; background:#111;">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -130,7 +149,7 @@
     </div>
 
     <!-- Section Vision de l'église -->
-    <section class="section-anim" class="py-5" style="background-color: #3A5F8F; overflow: hidden;">
+    <section class="section-anim py-5" style="background-color: #3A5F8F; overflow: hidden;">
         <div style="color: #FFFFFF;" class="container">
             <div style="color: #FFFFFF;" class="row align-items-center">
                 <div style="color: #FFFFFF;" class="col-lg-12 text-center">
@@ -181,16 +200,16 @@
                 <div class="col-lg-6 sr2">
                     <div class="ps-lg-4">
                         <h3 class="a t2 mb-4 d2" style="color: #2C3E50;">Pasteur Vita Ntela Rodrigue</h3>
-                        <p class="a t2 d3" style="color:#2C3E50;" style="color: #2C3E50;">
+                        <p class="a t2 d3" style="color:#2C3E50;">
                             <span class="a t1">Le Pasteur Vita Ntela Rodrigue est serviteur de Dieu et pasteur à l'Église EPV Philadelphie Paris, l'une des églises de la grande communauté EPV, basée à Kinshasa et dirigée par l'Apôtre Docteur Alpha Lushima.</span>
                         </p>
-                        <p  class="a t2 mb-3" style="color: #2C3E50;" style="color: #2C3E50;">
+                        <p  class="a t2 mb-3" style="color: #2C3E50;">
                             <span class="a t2">Appelé au ministère par la grâce de Dieu, le Pasteur Vita Ntela Rodrigue œuvre avec fidélité à l'annonce de l'Évangile de Jésus-Christ, à l'édification spirituelle des croyants et au développement d'une Église fondée sur l'amour, la sainteté et la vérité biblique. Son ministère est marqué par un profond attachement à la Parole de Dieu, à la prière et à l'accompagnement pastoral.</span>
                         </p>
-                        <p  class="a t2 mb-3" style="color: #2C3E50;" style="color: #2C3E50;">
+                        <p  class="a t2 mb-3" style="color: #2C3E50;">
                             <span class="a t3">Engagé dans la vision EPV, il participe activement à la croissance spirituelle de l'Église à Paris, en mettant un accent particulier sur l'enseignement biblique, la restauration des vies, l'unité de l'Église et la transmission des valeurs chrétiennes aux familles et aux jeunes générations.</span>
                         </p>
-                        <p class="a t2 d2" style="color: #2C3E50;" style="color: #2C3E50;">
+                        <p class="a t2 d2" style="color: #2C3E50;">
                             <span class="a t4">Sur le plan personnel, le Pasteur Vita Ntela Rodrigue est marié à Aliane Mubiala Voka, son soutien fidèle dans le ministère. Ensemble, ils sont parents de trois enfants : Hopenel, Doxa et Daliana, qu'ils élèvent dans la crainte de Dieu et selon les valeurs chrétiennes. Il croit fermement que la famille constitue un pilier essentiel de l'Église et de la société.</span>
                         </p>
                         <!-- Bulle Mot du pasteur -->
@@ -264,204 +283,114 @@
 
     <!-- Section Contact -->
     <section id="contact" class="py-5" style="background-color: #3A5F8F;">
-        <div style="color: #2C3E50;" class="container">
+        <div class="container">
             <h2 class="a t1 text-center mb-5" style="color: #FFFFFF;">Contactez-nous</h2>
-            
-            <div style="color: #2C3E50;" class="row g-5">
-                <!-- Contact Info - Colonne gauche -->
-                <div style="color: #2C3E50;" class="col-lg-4">
-                    <div style="color: #2C3E50;">
-                        <h3 class="a t2 mb-4" style="color: #FFFFFF;">Nos coordonnées</h3>
-                        
-                        <div class="card a mb-3 border-0 shadow-sm" style="background-color: rgba(255,255,255,0.95);">
-                            <div class="card-body" style="background-color: white;">
-                                <h5 class="a t3 card-title"  style="color: #1A1A1A;">
-                                    <i class="bi bi-geo-alt-fill text-primary me-2"></i>Adresse
-                                </h5>
-                                <p style="color: #4A4A4A;" class="a t2 card-text" style="color: #2C3E50;">
-                                    410 clos de la courtine<br>
-                                    93160 Noisy-Le-Grand, France
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card a mb-3 border-0 shadow-sm" style="background-color: rgba(255,255,255,0.95);">
-                            <div class="card-body" style="background-color: white;">
-                                <h5 class="a t3 card-title"  style="color: #1A1A1A;">
-                                    <i class="bi bi-telephone-fill text-primary me-2"></i>Téléphone
-                                </h5>
-                                <p style="color: #4A4A4A;" class="a t2 card-text" style="color: #2C3E50;">
-                                    <a href="tel:+337698970924" class="text-decoration-none d-block">06 98 97 09 24</a>
-									<a href="tel:+33769826354" class="text-decoration-none d-block mb-1">07 69 82 63 54</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card a mb-3 border-0 shadow-sm" style="background-color: rgba(255,255,255,0.95);">
-                            <div class="card-body" style="background-color: white;">
-                                <h5 class="a t3 card-title"  style="color: #1A1A1A;">
-                                    <i class="bi bi-envelope-fill text-primary me-2"></i>Email
-                                </h5>
-                                <p style="color: #4A4A4A;" class="a t2 card-text" style="color: #2C3E50;">
-                                    <a href="mailto:contact@epvphiladelphie.fr" style="color:inherit">contact@epvphiladelphie.fr</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card a border-0 shadow-sm" style="background-color: rgba(255,255,255,0.95);">
-                            <div class="card-body" style="background-color: white;">
-                                <h5 class="a t3 card-title"  style="color: #1A1A1A;">
-                                    <i class="bi bi-clock-fill text-primary me-2"></i>Horaires des cultes
-                                </h5>
-                                <p style="color: #4A4A4A;" class="a t2 card-text mb-1" style="color: #2C3E50;">
-                                    <strong>Mercredi :</strong> 18h - 19h30<br>
-                                    <strong>Dimanche :</strong> 9h30 - 12h30<br>
-                                    <strong>Prière en ligne :</strong><br>
-                                    - Tous les matins de 6h - 6h40<br>
-                                    - Tous les soirs de 21h - 22h
-                                </p>
-                            </div>
+            <div class="row g-4">
+                <!-- Gauche : coordonnées -->
+                <div class="col-lg-6">
+                    <div class="card a h-100" style="background-color: rgba(255,255,255,0.95);">
+                        <div class="card-body p-4">
+                            <h4 class="a t1 mb-4" style="color: #1A1A1A;">Nos coordonnées</h4>
+                            <h5 class="a t2" style="color: #1A1A1A;"><i class="bi bi-geo-alt-fill me-2" style="color: #D4B896;"></i>Adresse</h5>
+                            <p class="a t2" style="color: #2C3E50;">410 clos de la courtine<br>93160 Noisy-Le-Grand, France</p>
+                            <h5 class="a t3 mt-4" style="color: #1A1A1A;"><i class="bi bi-telephone-fill me-2" style="color: #D4B896;"></i>Téléphone</h5>
+                            <p class="a t3" style="color: #2C3E50;">
+                                <a href="tel:0698970924" style="color: #3A5F8F; text-decoration: none;">06 98 97 09 24</a><br>
+                                <a href="tel:0769826354" style="color: #3A5F8F; text-decoration: none;">07 69 82 63 54</a>
+                            </p>
+                            <h5 class="a t4 mt-4" style="color: #1A1A1A;"><i class="bi bi-envelope-fill me-2" style="color: #D4B896;"></i>Email</h5>
+                            <p class="a t4"><a href="mailto:contact@epvphiladelphie.fr" style="color: #3A5F8F; text-decoration: none;">contact@epvphiladelphie.fr</a></p>
+                            <h5 class="a t5 mt-4" style="color: #1A1A1A;"><i class="bi bi-clock-fill me-2" style="color: #D4B896;"></i>Horaires des cultes</h5>
+                            <p class="a t5" style="color: #2C3E50;">
+                                <strong>Mercredi :</strong> 18h - 19h30<br>
+                                <strong>Dimanche :</strong> 9h30 - 12h30<br><br>
+                                <strong>Prière en ligne :</strong><br>
+                                - Tous les matins de 6h - 6h40<br>
+                                - Tous les soirs de 21h - 22h
+                            </p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Contact Forms - Colonne droite -->
-                <div style="color: #2C3E50;" class="col-lg-6">
-                    <!-- Tabs -->
-                    <ul class="nav nav-tabs mb-4" id="contactTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="message-tab" data-bs-toggle="tab" data-bs-target="#message" type="button" role="tab" aria-controls="message" aria-selected="true">
-                                <i class="bi bi-envelope me-2"></i>Envoyer un message
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="callback-tab" data-bs-toggle="tab" data-bs-target="#callback" type="button" role="tab" aria-controls="callback" aria-selected="false">
-                                <i class="bi bi-telephone me-2"></i>Demande de rappel
-                            </button>
-                        </li>
-                    </ul>
-
-                    <!-- Tab Content -->
-                    <div style="color: #2C3E50;" class="tab-content" id="contactTabContent">
-                        <!-- Message Form -->
-                        <div style="color: #2C3E50;" class="tab-pane fade show active" id="message" role="tabpanel" aria-labelledby="message-tab">
-                            <div class="card a border-0 shadow-sm" style="background-color: rgba(255,255,255,0.95);">
-                                <div class="card-body p-4" style="background-color: white;">
-                                    <h4 class="a t3 mb-4"  style="color: #1A1A1A;">Envoyez-nous un message</h4>
-                                    <form action="https://formsubmit.co/dorcasmordiva@gmail.com" method="POST">
-                                        <input type="hidden" name="_subject" value="Nouveau message depuis le site">
-                                        <input type="hidden" name="_captcha" value="false">
-                                        <input type="hidden" name="_autoresponse" value="Merci pour votre message ! Nous avons bien reçu votre demande et nous vous répondrons dans les plus brefs délais. Cordialement, L'équipe EPV Philadelphie Paris">
-                                        
-                                        <div style="color: #2C3E50;" class="row g-3">
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="nom" class="form-label">Nom *</label>
-                                                <input type="text" class="form-control" id="nom" name="nom" required>
+                <!-- Droite : onglets message / rappel -->
+                <div class="col-lg-6">
+                    <div class="card a t1 h-100" style="background-color: rgba(255,255,255,0.95);">
+                        <div class="card-body p-4">
+                            <ul class="nav nav-tabs mb-4" id="contactTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-message" type="button" role="tab">
+                                        <i class="bi bi-envelope me-2"></i>Envoyer un message
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-rappel" type="button" role="tab">
+                                        <i class="bi bi-telephone me-2"></i>Demande de rappel
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <!-- Onglet Message -->
+                                <div class="tab-pane fade show active" id="tab-message" role="tabpanel">
+                                    <form>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <label class="form-label" style="color: #1A1A1A;">Nom *</label>
+                                                <input type="text" class="form-control" required>
                                             </div>
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="prenom" class="form-label">Prénom *</label>
-                                                <input type="text" class="form-control" id="prenom" name="prenom" required>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="email" class="form-label">Email *</label>
-                                                <input type="email" class="form-control" id="email" name="email" required>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="telephone" class="form-label">Téléphone</label>
-                                                <input type="tel" class="form-control" id="telephone" name="telephone">
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-12">
-                                                <label for="sujet" class="form-label">Sujet *</label>
-                                                <select class="form-select" id="sujet" name="sujet" required>
-                                                    <option value="">Choisissez un sujet</option>
-                                                    <option value="information">Demande d'information</option>
-                                                    <option value="accompagnement">Accompagnement spirituel</option>
-                                                    <option value="evenement">Événements</option>
-                                                    <option value="autre">Autre</option>
-                                                </select>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-12">
-                                                <label for="message" class="form-label">Message *</label>
-                                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-12">
-                                                <div style="color: #2C3E50;" class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="rgpd" required>
-                                                    <label class="form-check-label" for="rgpd">
-                                                        J'accepte que mes données soient utilisées pour répondre à ma demande *
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-12">
-                                                <button type="submit" class="a t4 btn btn-primary btn-lg">
-                                                    <i class="bi bi-send me-2"></i>Envoyer le message
-                                                </button>
+                                            <div class="col-6">
+                                                <label class="form-label" style="color: #1A1A1A;">Prénom *</label>
+                                                <input type="text" class="form-control" required>
                                             </div>
                                         </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" style="color: #1A1A1A;">Email *</label>
+                                            <input type="email" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" style="color: #1A1A1A;">Téléphone</label>
+                                            <input type="tel" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" style="color: #1A1A1A;">Message *</label>
+                                            <textarea class="form-control" rows="5" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-lg w-100" style="background-color: #D4B896; color: #1A1A1A; font-weight: 600;">
+                                            <i class="bi bi-send-fill me-2"></i>Envoyer
+                                        </button>
                                     </form>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Callback Form -->
-                        <div style="color: #2C3E50;" class="tab-pane fade" id="callback" role="tabpanel" aria-labelledby="callback-tab">
-                            <div class="card a border-0 shadow-sm" style="background-color: rgba(255,255,255,0.95);">
-                                <div class="card-body p-4" style="background-color: white;">
-                                    <h4 class="a t3 mb-3"  style="color: #1A1A1A;">Demande de rappel téléphonique</h4>
-                                    <p style="color: #4A4A4A;" class="a t2 text-muted mb-4" style="color: #4A4A4A;">Laissez-nous vos coordonnées et nous vous rappellerons dans les plus brefs délais.</p>
-                                    <form action="https://formsubmit.co/dorcasmordiva@gmail.com" method="POST">
-                                        <input type="hidden" name="_subject" value="Demande de rappel téléphonique">
-                                        <input type="hidden" name="_captcha" value="false">
-                                        <input type="hidden" name="_autoresponse" value="Merci pour votre demande de rappel ! Nous avons bien pris note de vos disponibilités et nous vous rappellerons dans les plus brefs délais. Cordialement, L'équipe EPV Philadelphie Paris">
-                                        
-                                        <div style="color: #2C3E50;" class="row g-3">
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="callback_nom" class="form-label">Nom *</label>
-                                                <input type="text" class="form-control" id="callback_nom" name="nom" required>
+                                <!-- Onglet Rappel -->
+                                <div class="tab-pane fade" id="tab-rappel" role="tabpanel">
+                                    <form>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <label class="form-label" style="color: #1A1A1A;">Nom *</label>
+                                                <input type="text" class="form-control" required>
                                             </div>
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="callback_prenom" class="form-label">Prénom *</label>
-                                                <input type="text" class="form-control" id="callback_prenom" name="prenom" required>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="callback_tel" class="form-label">Téléphone *</label>
-                                                <input type="tel" class="form-control" id="callback_tel" name="telephone" required>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="callback_email" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="callback_email" name="email">
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="callback_jour" class="form-label">Jour préféré *</label>
-                                                <input type="date" class="form-control" id="callback_jour" name="jour_prefere" required>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-md-6">
-                                                <label for="callback_heure" class="form-label">Plage horaire préférée *</label>
-                                                <select class="form-select" id="callback_heure" name="horaire_prefere" required>
-                                                    <option value="">Choisissez</option>
-                                                    <option value="matin">Matin (9h-12h)</option>
-                                                    <option value="apres-midi">Après-midi (14h-17h)</option>
-                                                    <option value="soir">Fin de journée (17h-18h)</option>
-                                                </select>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-12">
-                                                <label for="callback_motif" class="form-label">Motif du rappel</label>
-                                                <textarea class="form-control" id="callback_motif" name="motif" rows="3" placeholder="Précisez brièvement l'objet de votre demande (optionnel)"></textarea>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-12">
-                                                <div style="color: #2C3E50;" class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="callback_rgpd" required>
-                                                    <label class="form-check-label" for="callback_rgpd">
-                                                        J'accepte d'être recontacté(e) par téléphone *
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div style="color: #2C3E50;" class="col-12">
-                                                <button type="submit" class="a t4 btn btn-primary btn-lg">
-                                                    <i class="bi bi-telephone me-2"></i>Demander un rappel
-                                                </button>
+                                            <div class="col-6">
+                                                <label class="form-label" style="color: #1A1A1A;">Prénom *</label>
+                                                <input type="text" class="form-control" required>
                                             </div>
                                         </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" style="color: #1A1A1A;">Téléphone *</label>
+                                            <input type="tel" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" style="color: #1A1A1A;">Disponibilité préférée</label>
+                                            <select class="form-select">
+                                                <option value="">Choisir un créneau...</option>
+                                                <option>Matin (9h - 12h)</option>
+                                                <option>Après-midi (14h - 17h)</option>
+                                                <option>Soir (18h - 20h)</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" style="color: #1A1A1A;">Motif (optionnel)</label>
+                                            <textarea class="form-control" rows="4"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-lg w-100" style="background-color: #3A5F8F; color: #FFFFFF; font-weight: 600;">
+                                            <i class="bi bi-telephone-fill me-2"></i>Demander un rappel
+                                        </button>
                                     </form>
                                 </div>
                             </div>
@@ -471,38 +400,6 @@
             </div>
         </div>
     </section>
-
-    <!-- CSS Animations -->
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
-        }
-
-        .icon-circle {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-    </style>
 
     <footer class="bg-dark text-white py-4">
         <div class="container">
@@ -539,31 +436,33 @@
 
     <div class="modal fade" id="mentionsLegalesModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
         <div class="modal-header" style="background:#2C3E50"><h5 class="modal-title" style="color:#D4B896">Mentions légales</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><h4 style="color:#1A1A1A">Éditeur</h4><p style="color:#2C3E50"><strong>EPV Philadelphie Paris</strong><br>410 clos de la courtine, 93160 Noisy-Le-Grand</p><hr><h4 style="color:#1A1A1A">Contact</h4><p style="color:#2C3E50"><a href="mailto:contact@epvphiladelphie.fr">' + EMAIL + '</a></p></div>
+        <div class="modal-body" style="background:#E8D5C4"><h4 style="color:#1A1A1A">Éditeur</h4><p style="color:#2C3E50"><strong>EPV Philadelphie Paris</strong><br>410 clos de la courtine, 93160 Noisy-Le-Grand</p><hr><h4 style="color:#1A1A1A">Contact</h4><p style="color:#2C3E50"><a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a></p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
     <div class="modal fade" id="cguModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
         <div class="modal-header" style="background:#2C3E50"><h5 class="modal-title" style="color:#D4B896">CGU</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Les présentes CGU régissent l'accès au site de l'Église EPV Philadelphie Paris. Tous les contenus sont la propriété exclusive de l'Église EPV.</p></div>
+        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Les présentes CGU régissent l'accès au site de l'Église EPV Philadelphie Paris.</p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
     <div class="modal fade" id="confidentialiteModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
         <div class="modal-header" style="background:#2C3E50"><h5 class="modal-title" style="color:#D4B896">Politique de confidentialité</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Données collectées uniquement via vos formulaires. Droits RGPD : <a href="mailto:contact@epvphiladelphie.fr">' + EMAIL + '</a>. Cookies techniques uniquement.</p></div>
+        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Données uniquement via vos formulaires. Droits RGPD : <a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a>. Cookies techniques uniquement.</p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        window.addEventListener('DOMContentLoaded',function(){
-            var el=document.getElementById('heroCarousel');
-            if(el) new bootstrap.Carousel(el,{interval:3500,ride:'carousel',pause:false,wrap:true});
+        window.addEventListener('DOMContentLoaded', function() {
+            var el = document.getElementById('heroCarousel');
+            if (el) new bootstrap.Carousel(el, {interval: 3500, ride: 'carousel', pause: false, wrap: true});
         });
-        (function(){
-            var io=new IntersectionObserver(function(entries){
-                entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
-            },{threshold:0.08,rootMargin:'0px 0px -20px 0px'});
-            document.querySelectorAll('.a').forEach(function(el){io.observe(el);});
+        (function() {
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+                });
+            }, {threshold: 0.08, rootMargin: '0px 0px -30px 0px'});
+            document.querySelectorAll('.a').forEach(function(el) { io.observe(el); });
         })();
     </script>
 </body>
