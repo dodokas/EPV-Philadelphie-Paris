@@ -30,27 +30,20 @@
         }
     </style>
     <link rel="stylesheet" href="css/custom.css">
+    
     <style>
-        /* EPV ANIMATIONS */
-        @keyframes epvDown {0%{opacity:0;transform:translateY(-24px)}100%{opacity:1;transform:none}}
-        @keyframes epvUp   {0%{opacity:0;transform:translateY(24px)} 100%{opacity:1;transform:none}}
-        .pg-title{animation:epvDown .8s ease both}
-        .pg-sub  {animation:epvUp   .8s .25s ease both}
-        /* Scroll-triggered */
-        .a{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-        .a.al{transform:translateX(-28px)}.a.ar{transform:translateX(28px)}.a.az{transform:scale(.93)}
-        .a.on{opacity:1!important;transform:none!important}
-        .a.t1{transition-delay:.07s}.a.t2{transition-delay:.14s}.a.t3{transition-delay:.21s}
-        .a.t4{transition-delay:.28s}.a.t5{transition-delay:.35s}.a.t6{transition-delay:.42s}
-        .a.t7{transition-delay:.49s}.a.t8{transition-delay:.56s}
-        /* Mobile: hero banner sous la navbar */
-        @media(max-width:991px){
-            .mobile-hero{display:flex!important}
-            .navbar-brand.d-lg-none{display:none!important}
-        }
-        @media(min-width:992px){
-            .mobile-hero{display:none!important}
-        }
+        /* ── Animations scroll ── */
+        .anim { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+        .anim.from-left  { transform: translateX(-32px); }
+        .anim.from-right { transform: translateX(32px); }
+        .anim.zoom-in    { transform: scale(.93); }
+        .anim.visible    { opacity: 1 !important; transform: none !important; }
+        .anim.d1 { transition-delay: .08s; }
+        .anim.d2 { transition-delay: .16s; }
+        .anim.d3 { transition-delay: .24s; }
+        .anim.d4 { transition-delay: .32s; }
+        .anim.d5 { transition-delay: .40s; }
+        .anim.d6 { transition-delay: .48s; }
     </style>
 </head>
 <body>
@@ -73,10 +66,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500"" href="index.html">Accueil</a></li>
-<li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500"" href="rendez-vous.html">Rendez-vous pastoral</a></li>
-<li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500"" href="medias.html">Médias</a></li>
-<li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500"" href="boutique.html">Boutique/Soutien</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500" href="index.html">Accueil</a></li>
+<li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500" href="rendez-vous.html">Rendez-vous pastoral</a></li>
+<li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500" href="medias.html">Médias</a></li>
+<li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500" href="boutique.html">Boutique/Soutien</a></li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:#FFFFFF;font-weight:500">Plus</a>
@@ -100,14 +93,14 @@
         <!-- Navigation -->
              <!-- Navigation Style MFD -->
     
-                <div style="background:linear-gradient(180deg,#2C3E50 0%,#1B3A52 100%);padding:1rem 0;border-bottom:3px solid #D4B896">
+                <div class="d-none d-md-block" style="background:linear-gradient(180deg,#2C3E50 0%,#1B3A52 100%);padding:1rem 0;border-bottom:3px solid #D4B896">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6"><p class="mb-0" style="color:#FFF;font-size:.95rem"><i class="bi bi-geo-alt-fill me-2" style="color:#D4B896"></i>410 clos de la courtine, 93160 Noisy-Le-Grand</p></div>
+                <div class="col-md-6"><p class="anim mb-0" style="color:#FFF;font-size:.95rem"><i class="bi bi-geo-alt-fill me-2" style="color:#D4B896"></i>410 clos de la courtine, 93160 Noisy-Le-Grand</p></div>
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex justify-content-md-end align-items-center gap-3 flex-wrap">
-                        <span style="color:#FFF;font-size:.95rem" class="a t3"><i class="bi bi-envelope-fill me-2" style="color:#D4B896"></i><a href="mailto:contact@epvphiladelphie.fr" style="color:inherit">contact@epvphiladelphie.fr</a></span>
-                        <span style="color:#FFF;font-size:.95rem" class="a t3"><i class="bi bi-telephone-fill me-2" style="color:#D4B896"></i>06 98 97 09 24</span>
+                        <span style="color:#FFF;font-size:.95rem" ><i class="bi bi-envelope-fill me-2" style="color:#D4B896"></i>contact@epvphiladelphie.fr</span>
+                        <span style="color:#FFF;font-size:.95rem" ><i class="bi bi-telephone-fill me-2" style="color:#D4B896"></i>06 98 97 09 24</span>
                         <div class="d-flex gap-2">
                             <a href="https://www.facebook.com/people/Epv-Philadelphie/100081168060680/#" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-facebook"></i></a>
                             <a href="https://www.instagram.com/epv_philadelphie_paris_france" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-instagram"></i></a>
@@ -123,7 +116,7 @@
     <!-- Page Header -->
     <section class="py-5" style="background-color: #E8D5C4;">
         <div style="color: #2C3E50;" class="container text-center">
-            <h1 class="epv-pg-title display-5 fw-bold" style="color: #1A1A1A;">Nos départements</h1>
+            <h1 class="anim epv-pg-title display-5 fw-bold" style="color: #1A1A1A;">Nos départements</h1>
         </div>
     </section>
 
@@ -146,15 +139,15 @@
             <div class="row g-4">
                 <!-- Département des mamans -->
                 <div class="col-lg-6">
-                    <div class="card a dept-card h-100 border-0 shadow-sm sz">
+                    <div class="anim d1 card dept-card h-100 border-0 shadow-sm sz">
                         <div class="position-relative" style="height: 250px; overflow: hidden;">
-                            <img src="C:/Dorcas/Site Naomie/images/Conférence-maman.png" alt="Département des mamans" class="a az w-100 h-100" style="object-fit:contain;background:#f0ede8;">
+                            <img src="C:/Dorcas/Site Naomie/images/Conférence-maman.png" alt="Département des mamans" class="anim zoom-in w-100 h-100" style="object-fit:contain;background:#f0ede8;">
                             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);"></div>
-                            <h3 class="a t2 position-absolute bottom-0 start-0 text-white p-4 m-0" style="color: #FFFFFF;" style="color: #FFFFFF;">Département des mamans</h3>
+                            <h3 class="anim d2 position-absolute bottom-0 start-0 text-white p-4 m-0" style="color: #FFFFFF;">Département des mamans</h3>
                         </div>
                         <div class="card-body p-4">
-                            <p class="a t2 card-text mb-3" style="color: #1A1A1A;">Un espace dédié aux mères de notre communauté, où elles peuvent trouver du soutien, de l'encouragement et de la communion fraternelle.</p>
-                            <h6 class="a t3 mb-3" style="color: #1A1A1A;">Nos activités</h6>
+                            <p class="anim card-text mb-3" style="color: #1A1A1A;">Un espace dédié aux mères de notre communauté, où elles peuvent trouver du soutien, de l'encouragement et de la communion fraternelle.</p>
+                            <h6 class="mb-3" style="color: #1A1A1A;">Nos activités</h6>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Rencontres mensuelles de partage et de prière</li>
                                 <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Conférences et ateliers sur la parentalité chrétienne</li>
@@ -167,15 +160,15 @@
 
                 <!-- Département de musique -->
                 <div class="col-lg-6">
-                    <div class="card a dept-card h-100 border-0 shadow-sm sz">
+                    <div class="anim d1 card dept-card h-100 border-0 shadow-sm sz">
                         <div class="position-relative" style="height: 250px; overflow: hidden;">
-                            <img src="images/departement-musique.jpg" alt="Département de musique" class="a az w-100 h-100" style="object-fit:contain;background:#f0ede8;">
+                            <img src="images/departement-musique.jpg" alt="Département de musique" class="anim zoom-in w-100 h-100" style="object-fit:contain;background:#f0ede8;">
                             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);"></div>
-                            <h3 class="a t2 position-absolute bottom-0 start-0 text-white p-4 m-0" style="color: #FFFFFF;" style="color: #FFFFFF;">Département de musique</h3>
+                            <h3 class="anim d2 position-absolute bottom-0 start-0 text-white p-4 m-0" style="color: #FFFFFF;">Département de musique</h3>
                         </div>
                         <div class="card-body p-4">
-                            <p class="a t2 card-text mb-3" style="color: #1A1A1A;">Le cœur de la louange et de l'adoration à l'EPV Philadelphie Paris, où la musique glorifie Dieu et édifie les croyants.</p>
-                            <h6 class="a t3 mb-3" style="color: #1A1A1A;">Nos activités</h6>
+                            <p class="anim card-text mb-3" style="color: #1A1A1A;">Le cœur de la louange et de l'adoration à l'EPV Philadelphie Paris, où la musique glorifie Dieu et édifie les croyants.</p>
+                            <h6 class="mb-3" style="color: #1A1A1A;">Nos activités</h6>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Chorale et équipe de louange</li>
                                 <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Formation musicale et vocale</li>
@@ -188,15 +181,15 @@
 
                 <!-- Département jeunesse -->
                 <div class="col-lg-6">
-                    <div class="card a dept-card h-100 border-0 shadow-sm sz">
+                    <div class="anim d1 card dept-card h-100 border-0 shadow-sm sz">
                         <div class="position-relative" style="height: 250px; overflow: hidden;">
-                            <img src="images/departement-jeunesse.jpg" alt="Département jeunesse" class="a az w-100 h-100" style="object-fit:contain;background:#f0ede8;">
+                            <img src="images/departement-jeunesse.jpg" alt="Département jeunesse" class="anim zoom-in w-100 h-100" style="object-fit:contain;background:#f0ede8;">
                             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);"></div>
-                            <h3 class="a t2 position-absolute bottom-0 start-0 text-white p-4 m-0" style="color: #FFFFFF;" style="color: #FFFFFF;">Département jeunesse</h3>
+                            <h3 class="anim d2 position-absolute bottom-0 start-0 text-white p-4 m-0" style="color: #FFFFFF;">Département jeunesse</h3>
                         </div>
                         <div class="card-body p-4">
-                            <p class="a t2 card-text mb-3" style="color: #1A1A1A;">Formation et accompagnement de la nouvelle génération dans leur marche avec Christ et leur développement personnel.</p>
-                            <h6 class="a t3 mb-3" style="color: #1A1A1A;">Nos activités</h6>
+                            <p class="anim card-text mb-3" style="color: #1A1A1A;">Formation et accompagnement de la nouvelle génération dans leur marche avec Christ et leur développement personnel.</p>
+                            <h6 class="mb-3" style="color: #1A1A1A;">Nos activités</h6>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Rencontres de jeunes et cellules de croissance</li>
                                 <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Formations bibliques et leadership</li>
@@ -209,15 +202,15 @@
 
                 <!-- Département média -->
                 <div class="col-lg-6">
-                    <div class="card a dept-card h-100 border-0 shadow-sm sz">
+                    <div class="anim d1 card dept-card h-100 border-0 shadow-sm sz">
                         <div class="position-relative" style="height: 250px; overflow: hidden;">
-                            <img src="images/departement-media.jpg" alt="Département média" class="a az w-100 h-100" style="object-fit:contain;background:#f0ede8;">
+                            <img src="images/departement-media.jpg" alt="Département média" class="anim zoom-in w-100 h-100" style="object-fit:contain;background:#f0ede8;">
                             <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 100%);"></div>
-                            <h3 class="a t2 position-absolute bottom-0 start-0 text-white p-4 m-0" style="color: #FFFFFF;" style="color: #FFFFFF;">Département média</h3>
+                            <h3 class="anim d2 position-absolute bottom-0 start-0 text-white p-4 m-0" style="color: #FFFFFF;">Département média</h3>
                         </div>
                         <div class="card-body p-4">
-                            <p class="a t2 card-text mb-3" style="color: #1A1A1A;">Communication et production multimédia au service de l'évangélisation et de la diffusion du message de Christ.</p>
-                            <h6 class="a t3 mb-3" style="color: #1A1A1A;">Nos activités</h6>
+                            <p class="anim card-text mb-3" style="color: #1A1A1A;">Communication et production multimédia au service de l'évangélisation et de la diffusion du message de Christ.</p>
+                            <h6 class="mb-3" style="color: #1A1A1A;">Nos activités</h6>
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Enregistrement et diffusion des cultes</li>
                                 <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Gestion des réseaux sociaux</li>
@@ -230,20 +223,20 @@
 
                 <!-- Département Ecodim -->
                 <div class="col-lg-12">
-                    <div class="card a dept-card border-0 shadow-sm">
+                    <div class="anim d1 card dept-card border-0 shadow-sm">
                         <div class="row g-0">
                             <div class="col-md-5">
                                 <div class="position-relative" style="height: 100%; min-height: 300px; overflow: hidden;">
-                                    <img src="images/departement-ecodim.jpg" alt="Département Ecodim" class="a az w-100 h-100" style="object-fit:contain;background:#f0ede8;">
+                                    <img src="images/departement-ecodim.jpg" alt="Département Ecodim" class="anim zoom-in w-100 h-100" style="object-fit:contain;background:#f0ede8;">
                                     <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 100%);"></div>
                                 </div>
                             </div>
                             <div class="col-md-7">
                                 <div class="card-body p-4 p-lg-5">
-                                    <h3 class="a t2 mb-4" style="color: #1A1A1A;">Département Ecodim</h3>
-                                    <p class="a t2 lead mb-4" style="color: #2C3E50;">École du dimanche - Éducation spirituelle des enfants de 3 à 17 ans</p>
-                                    <p class="a t2 mb-4" style="color: #1A1A1A;">Un espace d'apprentissage biblique adapté aux enfants, où ils découvrent l'amour de Dieu à travers des histoires, des chants, des activités créatives et des jeux éducatifs.</p>
-                                    <h6 class="a t3 mb-3" style="color: #1A1A1A;">Nos activités</h6>
+                                    <h3 class="anim d2 mb-4" style="color: #1A1A1A;">Département Ecodim</h3>
+                                    <p class="anim lead mb-4" style="color: #2C3E50;">École du dimanche - Éducation spirituelle des enfants de 3 à 17 ans</p>
+                                    <p class="anim mb-4" style="color: #1A1A1A;">Un espace d'apprentissage biblique adapté aux enfants, où ils découvrent l'amour de Dieu à travers des histoires, des chants, des activités créatives et des jeux éducatifs.</p>
+                                    <h6 class="mb-3" style="color: #1A1A1A;">Nos activités</h6>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <ul class="list-unstyled mb-3">
@@ -261,7 +254,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-4">
-                                        <a href="inscription-ecodim.html" class="a t4 btn btn-primary">
+                                        <a href="inscription-ecodim.html" class="anim d2 btn btn-primary">
                                             <i class="bi bi-pencil-square me-2"></i>Inscrire mon enfant
                                         </a>
                                     </div>
@@ -274,43 +267,56 @@
 
             <!-- Call to Action -->
             <div class="text-center mt-5 p-5" style="background-color: #E8D5C4; border-radius: 15px;">
-                <h3 class="a t2 mb-3" style="color: #1A1A1A;">Rejoignez un département</h3>
-                <p class="a t2 lead mb-4" style="color: #2C3E50;">Vous souhaitez vous impliquer dans un de nos départements ? Contactez-nous pour plus d'informations.</p>
-                <a href="index.html#contact" class="a t4 btn btn-primary btn-lg">
+                <h3 class="anim d2 mb-3" style="color: #1A1A1A;">Rejoignez un département</h3>
+                <p class="anim lead mb-4" style="color: #2C3E50;">Vous souhaitez vous impliquer dans un de nos départements ? Contactez-nous pour plus d'informations.</p>
+                <a href="index.html#contact" class="anim d2 btn btn-primary btn-lg">
                     <i class="bi bi-envelope me-2"></i>Nous contacter
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-4 mt-0">
+    <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-3 mb-4">
                     <img src="images/logo.png" alt="Logo" height="50" class="mb-2 d-block">
-                    <small class="text-white-50">EPV Philadelphie Paris</small>
+                    <small class="text-white-50">EPV Philadelphie Paris<br>410 clos de la courtine<br>93160 Noisy-Le-Grand</small>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-3 mb-4">
                     <h6 class="text-white-50 mb-2">Navigation</h6>
                     <ul class="list-unstyled" style="font-size:.9rem">
                         <li><a href="index.html" class="text-white-50 text-decoration-none">Accueil</a></li>
                         <li><a href="medias.html" class="text-white-50 text-decoration-none">Médias</a></li>
                         <li><a href="boutique.html" class="text-white-50 text-decoration-none">Boutique</a></li>
                         <li><a href="departements.html" class="text-white-50 text-decoration-none">Départements</a></li>
+                        <li><a href="rendez-vous.html" class="text-white-50 text-decoration-none">Rendez-vous</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-3 mb-4">
                     <h6 class="text-white-50 mb-2">Légal</h6>
                     <ul class="list-unstyled" style="font-size:.9rem">
                         <li><a href="#" class="text-white-50 text-decoration-none" data-bs-toggle="modal" data-bs-target="#mentionsLegalesModal">Mentions légales</a></li>
                         <li><a href="#" class="text-white-50 text-decoration-none" data-bs-toggle="modal" data-bs-target="#cguModal">CGU</a></li>
                         <li><a href="#" class="text-white-50 text-decoration-none" data-bs-toggle="modal" data-bs-target="#confidentialiteModal">Confidentialité</a></li>
                     </ul>
-                    <div class="mt-2 d-flex gap-3">
-                        <a href="https://www.facebook.com/people/Epv-Philadelphie/100081168060680/#" target="_blank" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
-                        <a href="https://www.instagram.com/epv_philadelphie_paris_france" target="_blank" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
-                        <a href="https://www.youtube.com/@e.p.vphiladelphieparis9228" target="_blank" class="text-white-50"><i class="bi bi-youtube fs-5"></i></a>
-                        <a href="https://www.tiktok.com/@epvphiladelphie?is_from_webapp=1&sender_device=pc" target="_blank" class="text-white-50"><i class="bi bi-tiktok fs-5"></i></a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="text-white mb-2">Suivez-nous</h6>
+                    <p class="text-white-50 mb-3" style="font-size:.85rem">Restez connectés et suivez nos actualités sur nos réseaux sociaux.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.facebook.com/people/Epv-Philadelphie/100081168060680/#" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem">
+                            <i class="bi bi-facebook fs-4"></i><span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/epv_philadelphie_paris_france" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem">
+                            <i class="bi bi-instagram fs-4"></i><span>Instagram</span>
+                        </a>
+                        <a href="https://www.youtube.com/@e.p.vphiladelphieparis9228" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem">
+                            <i class="bi bi-youtube fs-4"></i><span>YouTube</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@epvphiladelphie?is_from_webapp=1&sender_device=pc" target="_blank" class="text-white-50 text-decoration-none d-flex flex-column align-items-center gap-1" style="font-size:.75rem">
+                            <i class="bi bi-tiktok fs-4"></i><span>TikTok</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -320,38 +326,37 @@
     </footer>
 
     <div class="modal fade" id="mentionsLegalesModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
-        <div class="modal-header" style="background:#2C3E50"><h5 class="modal-title" style="color:#D4B896">Mentions légales</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><h4 style="color:#1A1A1A">Éditeur</h4><p style="color:#2C3E50"><strong>EPV Philadelphie Paris</strong><br>410 clos de la courtine, 93160 Noisy-Le-Grand</p><hr><h4 style="color:#1A1A1A">Contact</h4><p style="color:#2C3E50"><a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a></p></div>
+        <div class="modal-header" style="background:#2C3E50"><h5 class="anim d3 modal-title" style="color:#D4B896">Mentions légales</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body" style="background:#E8D5C4"><h4 style="color:#1A1A1A" class="anim d2">Éditeur</h4><p style="color:#2C3E50" class="anim"><strong>EPV Philadelphie Paris</strong><br>410 clos de la courtine, 93160 Noisy-Le-Grand</p><hr><h4 style="color:#1A1A1A" class="anim d2">Contact</h4><p style="color:#2C3E50" class="anim"><a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a></p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
     <div class="modal fade" id="cguModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
-        <div class="modal-header" style="background:#2C3E50"><h5 class="modal-title" style="color:#D4B896">CGU</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Les présentes CGU régissent l'accès au site de l'Église EPV Philadelphie Paris.</p></div>
+        <div class="modal-header" style="background:#2C3E50"><h5 class="anim d3 modal-title" style="color:#D4B896">CGU</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50" class="anim">Les présentes CGU régissent l'accès au site de l'Église EPV Philadelphie Paris.</p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
     <div class="modal fade" id="confidentialiteModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
-        <div class="modal-header" style="background:#2C3E50"><h5 class="modal-title" style="color:#D4B896">Politique de confidentialité</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Données uniquement via vos formulaires. Droits RGPD : <a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a>. Cookies techniques uniquement.</p></div>
+        <div class="modal-header" style="background:#2C3E50"><h5 class="anim d3 modal-title" style="color:#D4B896">Politique de confidentialité</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50" class="anim">Données uniquement via vos formulaires. Droits RGPD : <a href="mailto:contact@epvphiladelphie.fr">contact@epvphiladelphie.fr</a>. Cookies techniques uniquement.</p></div>
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        /* Carousel */
-        window.addEventListener('DOMContentLoaded',function(){
-            var el=document.getElementById('heroCarousel');
-            if(el) new bootstrap.Carousel(el,{interval:3500,ride:'carousel',pause:false,wrap:true});
+        window.addEventListener('DOMContentLoaded', function() {
+            var el = document.getElementById('heroCarousel');
+            if (el) new bootstrap.Carousel(el, {interval: 3500, ride: 'carousel', pause: false, wrap: true});
         });
-        /* Scroll animations */
-        (function(){
-            var io=new IntersectionObserver(function(entries){
-                entries.forEach(function(e){
-                    if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}
-                });
-            },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-            document.querySelectorAll('.a').forEach(function(el){io.observe(el);});
-        })();
         
+        /* ── IntersectionObserver animations ── */
+        (function() {
+            var io = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.anim').forEach(function(el) { io.observe(el); });
+        })();
     </script>
 </body>
 </html>
