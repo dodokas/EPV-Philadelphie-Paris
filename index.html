@@ -65,46 +65,32 @@
     </style>
 </head>
 <body>
-        <!-- Navigation Style MFD -->
-                <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2C3E50; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#2C3E50;box-shadow:0 2px 10px rgba(0,0,0,.1)">
         <div class="container">
-            <!-- Logo et titre pour mobile -->
-            <a class="navbar-brand d-lg-none mx-auto text-center" href="index.html" style="width: 100%;">
-                <img src="images/logo-epv.png" alt="Logo" height="60" class="mb-2">
-                <div style="color: #FFFFFF; font-weight: 700; font-size: 1rem; letter-spacing: 1px;">EPV Philadelphie Paris</div>
-                <div style="color: #D4B896; font-size: 0.8rem; font-style: italic; margin-top: 2px;">Une Église forte commence par des familles enracinées en Christ</div>
-            </a>
-            
-            <!-- Logo et titre pour desktop -->
+            <!-- Logo desktop -->
             <a class="navbar-brand d-none d-lg-flex align-items-center" href="index.html">
                 <img src="images/logo-epv.png" alt="Logo" height="70" class="me-3">
                 <div>
-                    <div style="color: #FFFFFF; font-weight: 700; font-size: 1.4rem; letter-spacing: 2px;">EPV PHILADELPHIE PARIS</div>
-                    <div style="color: #D4B896; font-size: 0.9rem; font-style: italic; letter-spacing: 1px;">Une Église forte commence par des familles enracinées en Christ</div>
+                    <div style="color:#FFFFFF;font-weight:700;font-size:1.4rem;letter-spacing:2px">EPV PHILADELPHIE PARIS</div>
+                    <div style="color:#D4B896;font-size:.9rem;font-style:italic;letter-spacing:1px">Une Église forte commence par des familles enracinées en Christ</div>
                 </div>
             </a>
-            
+            <!-- Logo mobile (dans la navbar, juste le logo petit) -->
+            <a class="navbar-brand d-lg-none" href="index.html">
+                <img src="images/logo-epv.png" alt="Logo" height="45">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html" style="color: #FFFFFF; font-weight: 500;">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="rendez-vous.html" style="color: #FFFFFF; font-weight: 500;">Rendez-vous pastoral</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="medias.html" style="color: #FFFFFF; font-weight: 500;">Médias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="boutique.html" style="color: #FFFFFF; font-weight: 500;">Boutique/Soutien</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500" href="index.html">Accueil</a></li>
+<li class="nav-item"><a class="nav-link fw-bold" style="color:#D4B896;font-weight:600" href="rendez-vous.html">Rendez-vous pastoral</a></li>
+<li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500" href="medias.html">Médias</a></li>
+<li class="nav-item"><a class="nav-link" style="color:#FFFFFF;font-weight:500" href="boutique.html">Boutique/Soutien</a></li>
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #FFFFFF; font-weight: 500;">
-                            Plus
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:#FFFFFF;font-weight:500">Plus</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="departements.html">Nos départements</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -115,6 +101,35 @@
             </div>
         </div>
     </nav>
+	<!-- Hero mobile: logo + phrase (visible seulement sur mobile) -->
+    <div class="mobile-hero" style="display:none;background:#2C3E50;padding:1.5rem 1rem 1rem;flex-direction:column;align-items:center;text-align:center;border-bottom:3px solid #D4B896">
+        <img src="images/logo-epv.png" alt="Logo" height="70" class="mb-2">
+        <div style="color:#FFFFFF;font-weight:700;font-size:1.1rem;letter-spacing:1px">EPV PHILADELPHIE PARIS</div>
+        <div style="color:#D4B896;font-size:.85rem;font-style:italic;margin-top:.3rem">Une Église forte commence par des familles enracinées en Christ</div>
+    </div>
+			<!-- Navigation -->
+        <!-- Navigation -->
+            <!-- Navigation Style MFD -->
+    
+                <div class="d-none d-md-block" style="background:linear-gradient(180deg,#2C3E50 0%,#1B3A52 100%);padding:1rem 0;border-bottom:3px solid #D4B896">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6"><p class="mb-0" style="color:#FFF;font-size:.95rem"><i class="bi bi-geo-alt-fill me-2" style="color:#D4B896"></i>410 clos de la courtine, 93160 Noisy-Le-Grand</p></div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex justify-content-md-end align-items-center gap-3 flex-wrap">
+                        <span style="color:#FFF;font-size:.95rem" ><i class="bi bi-envelope-fill me-2" style="color:#D4B896"></i>contact@epvphiladelphie.fr</span>
+                        <span style="color:#FFF;font-size:.95rem" ><i class="bi bi-telephone-fill me-2" style="color:#D4B896"></i>06 98 97 09 24</span>
+                        <div class="d-flex gap-2">
+                            <a href="https://www.facebook.com/people/Epv-Philadelphie/100081168060680/#" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/epv_philadelphie_paris_france" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@epvphiladelphie?is_from_webapp=1&sender_device=pc" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-tiktok"></i></a>
+                            <a href="https://www.youtube.com/@e.p.vphiladelphieparis9228" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
             <div class="d-none d-md-block" style="background:linear-gradient(180deg,#2C3E50 0%,#1B3A52 100%);padding:1rem 0;border-bottom:3px solid #D4B896">
         <div class="container">
@@ -210,7 +225,7 @@
                 <!-- Photo à gauche -->
                 <div class="col-lg-6">
                     <div class="position-relative">
-                        <img src="images/pasteur.JPG" alt="Pasteur Vita Ntela Rodrigue" class="anim zoom-in az img-fluid rounded shadow-lg" style="border-radius: 20px !important; width: 100%; max-width: 480px; object-fit: cover; display: block; margin: 0 auto;">
+                        <img src="images/pasteur.jpg" alt="Pasteur Vita Ntela Rodrigue" class="anim zoom-in az img-fluid rounded shadow-lg" style="border-radius: 20px !important; width: 100%; max-width: 480px; object-fit: cover; display: block; margin: 0 auto;">
                     </div>
                 </div>
                 
