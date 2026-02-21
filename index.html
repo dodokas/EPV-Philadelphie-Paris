@@ -14,37 +14,27 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
-    
     <style>
-        /* Police Bookman style */
-        body {
-            font-family: 'EB Garamond', 'Bookman Old Style', serif;
-            color: #374151;
-            padding-top: 0;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'EB Garamond', 'Bookman Old Style', serif;
-            font-weight: 600;
-        }
-        
-        .navbar-brand {
-            font-family: 'EB Garamond', 'Bookman Old Style', serif;
-            font-weight: 700;
-        }
-    </style>
-    <style>
-        /* EPV ANIMATIONS v3 */
-        @keyframes epvDown {0%{opacity:0;transform:translateY(-26px)}100%{opacity:1;transform:none}}
-        @keyframes epvUp   {0%{opacity:0;transform:translateY(26px)} 100%{opacity:1;transform:none}}
-        .epv-pg-title{animation:epvDown .8s ease both}
-        .epv-pg-sub  {animation:epvUp   .8s .2s ease both}
-        .a{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
-        .a.al{transform:translateX(-30px)}.a.ar{transform:translateX(30px)}.a.az{transform:scale(.93)}
+        /* EPV ANIMATIONS */
+        @keyframes epvDown {0%{opacity:0;transform:translateY(-24px)}100%{opacity:1;transform:none}}
+        @keyframes epvUp   {0%{opacity:0;transform:translateY(24px)} 100%{opacity:1;transform:none}}
+        .pg-title{animation:epvDown .8s ease both}
+        .pg-sub  {animation:epvUp   .8s .25s ease both}
+        /* Scroll-triggered */
+        .a{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+        .a.al{transform:translateX(-28px)}.a.ar{transform:translateX(28px)}.a.az{transform:scale(.93)}
         .a.on{opacity:1!important;transform:none!important}
         .a.t1{transition-delay:.07s}.a.t2{transition-delay:.14s}.a.t3{transition-delay:.21s}
         .a.t4{transition-delay:.28s}.a.t5{transition-delay:.35s}.a.t6{transition-delay:.42s}
         .a.t7{transition-delay:.49s}.a.t8{transition-delay:.56s}
+        /* Mobile: hero banner sous la navbar */
+        @media(max-width:991px){
+            .mobile-hero{display:flex!important}
+            .navbar-brand.d-lg-none{display:none!important}
+        }
+        @media(min-width:992px){
+            .mobile-hero{display:none!important}
+        }
     </style>
     <style>
         /* Animations scroll */
@@ -101,13 +91,13 @@
             </div>
         </div>
     </nav>
-	<!-- Hero mobile: logo + phrase (visible seulement sur mobile) -->
+    <!-- Hero mobile: logo + phrase (visible seulement sur mobile) -->
     <div class="mobile-hero" style="display:none;background:#2C3E50;padding:1.5rem 1rem 1rem;flex-direction:column;align-items:center;text-align:center;border-bottom:3px solid #D4B896">
         <img src="images/logo-epv.png" alt="Logo" height="70" class="mb-2">
         <div style="color:#FFFFFF;font-weight:700;font-size:1.1rem;letter-spacing:1px">EPV PHILADELPHIE PARIS</div>
         <div style="color:#D4B896;font-size:.85rem;font-style:italic;margin-top:.3rem">Une Église forte commence par des familles enracinées en Christ</div>
     </div>
-			<!-- Navigation -->
+            <!-- Navigation -->
         <!-- Navigation -->
             <!-- Navigation Style MFD -->
     
