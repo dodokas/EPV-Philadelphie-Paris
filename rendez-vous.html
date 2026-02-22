@@ -85,6 +85,8 @@
                             <li><a class="dropdown-item" href="departements.html">Nos départements</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="inscription-ecodim.html">Inscription Ecodim</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="nouveau-venu.html">Inscription nouveau venu</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -108,7 +110,7 @@
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex justify-content-md-end align-items-center gap-3 flex-wrap">
                         <span style="color:#FFF;font-size:.95rem" ><i class="bi bi-envelope-fill me-2" style="color:#D4B896"></i><a href="mailto:contact@epvphiladelphie.com" style="color:#FFFFFF;text-decoration:none;">contact@epvphiladelphie.com</a></span>
-                        <span style="color:#FFF;font-size:.95rem" ><i class="bi bi-telephone-fill me-2" style="color:#D4B896"></i>06 98 97 09 24</span>
+                        <span style="color:#FFF;font-size:.95rem" ><i class="bi bi-telephone-fill me-2" style="color:#D4B896"></i>06 98 87 95 24</span>
                         <div class="d-flex gap-2">
                             <a href="https://www.facebook.com/people/Epv-Philadelphie/100081168060680/#" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-facebook"></i></a>
                             <a href="https://www.instagram.com/epv_philadelphie_paris_france" target="_blank" style="color:#D4B896;font-size:1.2rem"><i class="bi bi-instagram"></i></a>
@@ -190,16 +192,18 @@
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <img src="images/logo-epv.png" alt="Logo" height="50" class="mb-2 d-block">
-                    <small class="text-white-50">EPV Philadelphie Paris<br>410 clos de la courtine<br>93160 Noisy-Le-Grand</small>
+                    <small class="text-white-50">EPV Philadelphie Paris<br>410 clos de la courtine<br>93160 Noisy-Le-Grand<br><i class="bi bi-telephone-fill me-1"></i>06 98 87 95 24</small>
                 </div>
                 <div class="col-md-3 mb-4">
                     <h6 class="text-white-50 mb-2">Navigation</h6>
-                    <ul class="list-unstyled" style="font-size:.9rem">
+                                                            <ul class="list-unstyled" style="font-size:.9rem">
                         <li><a href="index.html" class="text-white-50 text-decoration-none">Accueil</a></li>
+                        <li><a href="rendez-vous.html" class="text-white-50 text-decoration-none">Rendez-vous pastoral</a></li>
                         <li><a href="medias.html" class="text-white-50 text-decoration-none">Médias</a></li>
-                        <li><a href="boutique.html" class="text-white-50 text-decoration-none">Boutique</a></li>
-                        <li><a href="departements.html" class="text-white-50 text-decoration-none">Départements</a></li>
-                        <li><a href="rendez-vous.html" class="text-white-50 text-decoration-none">Rendez-vous</a></li>
+                        <li><a href="boutique.html" class="text-white-50 text-decoration-none">Boutique/Soutien</a></li>
+                        <li><a href="departements.html" class="text-white-50 text-decoration-none">Nos départements</a></li>
+                        <li><a href="inscription-ecodim.html" class="text-white-50 text-decoration-none">Inscription Ecodim</a></li>
+                        <li><a href="nouveau-venu.html" class="text-white-50 text-decoration-none">Inscription nouveau venu</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-4">
@@ -238,18 +242,15 @@
     </div></div></div>
     <div class="modal fade" id="confidentialiteModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
         <div class="modal-header" style="background:#2C3E50"><h5 class="anim d3 modal-title" style="color:#D4B896">Politique de confidentialité</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-        <div class="modal-body" style="background:#E8D5C4"><p style="color:#2C3E50">Données uniquement via vos formulaires. Droits RGPD : <a href="mailto:contact@epvphiladelphie.com" style="color:#3A5F8F;text-decoration:none;">contact@epvphiladelphie.com</a>. Cookies techniques uniquement.</p></div>
-        <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
-    </div></div></div>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <div clas    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var el = document.getElementById('heroCarousel');
-            if (el) new bootstrap.Carousel(el, {interval: 3500, ride: 'carousel', pause: false, wrap: true});
-            document.body.classList.add('js-ready');
+        window.addEventListener(DOMContentLoaded, function() {
+            document.body.classList.add(js-ready);
             var io = new IntersectionObserver(function(entries) {
-                entries.forEach(function(e) {
-                    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-                });
-            }, { threshold: 0.05
+                entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add(visible); });
+            }, {threshold: 0.1});
+            document.querySelectorAll(.anim).forEach(function(el){ io.observe(el); });
+        });
+    </script>
+</body>
+</html>
