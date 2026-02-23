@@ -123,7 +123,7 @@
     </div>
 
     <!-- Photo statique slide1 -->
-    <div class="d-flex justify-content-center" style="background-color: #E8D5C4; padding: 20px 0;">
+    <div class="d-flex justify-content-center" style="background-color: #E8D5C4; padding: 20px 16px;">
         <div style="max-width: 900px; width: 100%;">
             <img src="images/slide1.jpg" class="d-block mx-auto" alt="EPV Philadelphie Paris" style="width:100%;max-width:900px;height:auto;max-height:400px;object-fit:contain;object-position:center center;background:#E8D5C4;display:block;">
         </div>
@@ -441,24 +441,8 @@
         <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button></div>
     </div></div></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('js-ready');
-            var io = new IntersectionObserver(function(entries) {
-                entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-            }, { threshold: 0.05 });
-            document.querySelectorAll('.anim').forEach(function(el) { io.observe(el); });
-
-            // Mobile hero
-            var mobileHero = document.querySelector('.mobile-hero');
-            if (mobileHero) {
-                if (window.innerWidth < 992) mobileHero.style.display = 'flex';
-                window.addEventListener('resize', function() {
-                    mobileHero.style.display = window.innerWidth < 992 ? 'flex' : 'none';
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+            var io = new IntersectionObserver(funct
